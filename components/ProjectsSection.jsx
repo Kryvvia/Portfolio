@@ -111,7 +111,7 @@ export default function ProjectsSection() {
       description: 'An interactive IPO information board engineering data visualization, analytics dashboard, real-time stock alerts, and mobile-friendly metrics.',
       tech: ['React.js', 'Node.js', 'Tailwind CSS', 'RESTful API'],
     },
-  ];  return (
+  ]; return (
     <section id="projects" className="pt-8 pb-10 bg-black relative z-10 overflow-hidden">
       <div className="max-w-6xl mx-auto space-y-10 px-6">
 

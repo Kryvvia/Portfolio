@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,13 +16,16 @@ export default function Navbar() {
   }, []);
 
   const menuItems = [
-    { name: 'Home', href: '#' },
-    { name: 'Expertise', href: '#expertise' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Publications', href: '#publications' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Team', href: '/team' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ];
+
+  const isActive = (path) => router.pathname === path;
 
   return (
     <>
@@ -33,10 +36,9 @@ export default function Navbar() {
                    w-[94%] max-w-6xl transition-all duration-300"
       >
         {/* Logo */}
-        <Link href="#" className="flex items-center gap-2 group" aria-label="Nikshitha Home">
-          <Sparkles className="w-5 h-5 text-indigo-500 group-hover:rotate-12 transition-transform duration-300" />
+        <Link href="/" className="flex items-center gap-2 group" aria-label="Kryvvia Home">
           <span className="text-xl md:text-2xl font-light tracking-wider leading-none text-white">
-            Nikshitha<span className="font-semibold text-indigo-500 group-hover:text-white transition-colors">.</span>
+            KRYVVIA<span className="font-semibold text-gray-400 group-hover:text-white transition-colors">.</span>
           </span>
         </Link>
 
@@ -46,7 +48,8 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-xs font-semibold tracking-wider uppercase transition duration-200 hover:text-white px-1.5 py-1 rounded text-gray-400"
+              className={`text-xs font-semibold tracking-wider uppercase transition duration-200 hover:text-white px-1.5 py-1 rounded ${isActive(item.href) ? 'text-white font-bold' : 'text-gray-400'
+                }`}
             >
               {item.name}
             </Link>
@@ -55,11 +58,11 @@ export default function Navbar() {
 
         {/* Action Button */}
         <Link
-          href="#contact"
+          href="/contact"
           className="hidden lg:flex items-center gap-1 bg-white text-black font-mono uppercase tracking-wider text-[11px] font-bold 
                      px-4 py-2 rounded-full hover:bg-neutral-200 transition"
         >
-          Let's Connect <ArrowUpRight className="w-3.5 h-3.5" />
+          Hire Us <ArrowUpRight className="w-3.5 h-3.5" />
         </Link>
 
         {/* Mobile Menu Toggle */}
@@ -88,12 +91,9 @@ export default function Navbar() {
             aria-modal="true"
           >
             <div className="flex justify-between items-center mb-6">
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-indigo-500" />
-                <span className="text-xl font-light tracking-wider text-white">
-                  Nikshitha<span className="font-semibold text-indigo-500">.</span>
-                </span>
-              </div>
+              <span className="text-xl font-light tracking-wider text-white">
+                KRYVVIA<span className="font-semibold text-gray-400">.</span>
+              </span>
               <button
                 onClick={closeMenu}
                 className="text-gray-400 hover:text-white transition"
@@ -109,7 +109,10 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={closeMenu}
-                  className="py-2 px-3 rounded-lg transition-colors text-gray-400 hover:bg-neutral-900 hover:text-white"
+                  className={`py-2 px-3 rounded-lg transition-colors ${isActive(item.href)
+                      ? 'bg-neutral-800 text-white font-semibold'
+                      : 'text-gray-400 hover:bg-neutral-900 hover:text-white'
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -117,12 +120,12 @@ export default function Navbar() {
             </nav>
 
             <Link
-              href="#contact"
+              href="/contact"
               onClick={closeMenu}
               className="mt-auto w-full text-center bg-white text-black font-mono uppercase tracking-wider text-xs 
                          px-6 py-3 rounded-xl font-medium shadow-lg transition hover:bg-neutral-200 flex items-center justify-center gap-1.5"
             >
-              Let's Connect <ArrowUpRight className="w-4 h-4" />
+              Get In Touch <ArrowUpRight className="w-4 h-4" />
             </Link>
           </aside>
         </>
