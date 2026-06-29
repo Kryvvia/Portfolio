@@ -1,11 +1,9 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
-import CustomCursor from './CustomCursor';
 
 export default function Layout({ children }) {
   return (
     <div className="bg-black min-h-screen text-gray-100 flex flex-col relative selection:bg-neutral-800 selection:text-white">
-      <CustomCursor />
       {/* Navigation */}
       <Navbar />
 
