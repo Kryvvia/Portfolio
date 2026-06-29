@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SEO from '../../components/SEO';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ArrowLeft, ArrowUpRight, Check } from 'lucide-react';
@@ -180,10 +181,11 @@ export default function ProjectDetail() {
 
   return (
     <>
-      <Head>
-        <title>{data.title} | Kryvvia Case Study</title>
-        <meta name="description" content={data.desc} />
-      </Head>
+      <SEO 
+        title={`${data.title} - Case Study | Kryvvia`}
+        description={data.desc}
+        path={`/projects/${id}`}
+      />
 
       <div className="max-w-5xl mx-auto px-6 py-8 space-y-12 bg-black text-gray-200">
         {/* Back Link */}

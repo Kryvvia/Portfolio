@@ -23,7 +23,7 @@ export default function TeamSection() {
       id: 'sandeep',
       name: 'Sandeep Naik',
       role: 'Co-founder & Full Stack Web Developer',
-      focus: 'React, Next.js, Node.js, Express, MongoDB',
+      focus: 'MERN Stack, Next.js, Go, TypeScript, React Native, n8n, AWS',
       bio: 'B.Tech CSE student at IIIT Sonepat. Expert in engineering lightning-fast user interfaces, and managing full stack deployments. Leading team workflows.',
       image: '/images/sandeep_v2.png',
       color: 'border-neutral-800 shadow-neutral-900/5',
@@ -55,14 +55,14 @@ export default function TeamSection() {
     <section id="team" className="py-14 px-6 bg-black relative z-10">
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Title */}
-        <div className="max-w-3xl mx-auto text-center space-y-4">
-          <span className="inline-block text-xs font-semibold uppercase tracking-wider text-white bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full font-mono">
+        <div className="text-center space-y-4 max-w-3xl mx-auto flex flex-col items-center">
+          <h2 className="text-sm font-semibold tracking-[0.2em] text-gray-400 uppercase">
             Three minds. One vision. Endless possibilities.
-          </span>
+          </h2>
           <h3 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
             Meet the Team Behind Kryvvia
           </h3>
-          <p className="text-gray-400 text-sm sm:text-base font-light leading-relaxed">
+          <p className="text-gray-400 text-base font-light leading-relaxed">
             Our journey began at IIIT Sonepat, where three passionate developers came together through a shared love for technology, innovation, and problem-solving. What started as classroom discussions, hackathons, and collaborative projects gradually evolved into a vision of building impactful digital products. Today, Kryvvia brings together expertise in AI, full-stack development, backend engineering, UI/UX, and product strategy to help businesses transform their ideas into scalable digital solutions.
           </p>
         </div>

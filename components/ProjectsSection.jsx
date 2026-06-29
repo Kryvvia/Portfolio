@@ -20,7 +20,7 @@ function ProjectSpotlightCard({ project }) {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       whileHover={{ y: -6, transition: { duration: 0.2 } }}
-      className="group relative bg-neutral-950/40 border border-neutral-900 rounded-3xl p-8 flex flex-col justify-between 
+      className="group relative bg-neutral-950/40 border border-neutral-900 rounded-3xl p-6 flex flex-col justify-between 
                  overflow-hidden shadow-2xl transition-all duration-300 hover:border-neutral-800/80"
     >
       {/* Spotlight Hover Glow */}
@@ -37,7 +37,7 @@ function ProjectSpotlightCard({ project }) {
         }}
       />
 
-      <div className="space-y-6 relative z-10">
+      <div className="space-y-4 relative z-10">
         <div className="flex justify-between items-center">
           <span className="text-xs font-semibold uppercase tracking-wider text-gray-400 bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full">
             {project.category}
@@ -57,7 +57,7 @@ function ProjectSpotlightCard({ project }) {
         </div>
       </div>
 
-      <div className="space-y-4 pt-8 relative z-10 mt-6 border-t border-white/5">
+      <div className="space-y-4 pt-6 relative z-10 mt-4 border-t border-white/5">
         {/* Technologies */}
         <div className="flex flex-wrap gap-1.5">
           {project.tech.map((tag) => (
@@ -98,11 +98,11 @@ export default function ProjectsSection() {
       tech: ['Deep Learning', 'Computer Vision', 'Federated Learning', 'Python'],
     },
     {
-      id: 'disney-clone',
-      title: 'Disney+ Clone',
-      category: 'Frontend & UI',
-      description: 'A full responsive replica of the Disney+ interface, featuring movie sliders, Google authentication logins, database syncing, and video streams.',
-      tech: ['React.js', 'Redux', 'Firebase', 'Tailwind CSS'],
+      id: 'rightmark',
+      title: 'Rightmark.io',
+      category: 'Digital Marketing & Web',
+      description: 'A digital marketing agency website specialising in web design, SEO, social media, paid ads, and analytics for SMBs.',
+      tech: ['React.js', 'Next.js', 'Tailwind CSS'],
     },
     {
       id: 'ipo-dashboard',
@@ -111,42 +111,54 @@ export default function ProjectsSection() {
       description: 'An interactive IPO information board engineering data visualization, analytics dashboard, real-time stock alerts, and mobile-friendly metrics.',
       tech: ['React.js', 'Node.js', 'Tailwind CSS', 'RESTful API'],
     },
+    {
+      id: 'fintech-app',
+      title: 'Fintech Dashboard',
+      category: 'Web Application',
+      description: 'A comprehensive financial dashboard providing real-time analytics, user portfolio tracking, and transaction management.',
+      tech: ['React', 'Node.js', 'MongoDB'],
+    },
+    {
+      id: 'health-tracker',
+      title: 'Health & Fitness App',
+      category: 'Mobile App',
+      description: 'A cross-platform mobile application for tracking daily fitness activities, diet plans, and health metrics.',
+      tech: ['React Native', 'Firebase', 'Redux'],
+    },
   ]; return (
     <section id="projects" className="pt-8 pb-10 bg-black relative z-10 overflow-hidden">
       <div className="max-w-6xl mx-auto space-y-10 px-6">
 
         {/* Section Title */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-          <div className="space-y-3">
-            <motion.h2
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-sm font-semibold tracking-[0.2em] text-gray-400 uppercase"
-            >
-              Our Portfolio
-            </motion.h2>
-            <motion.h3
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white"
-            >
-              Latest Projects We <span className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">Recently Finished.</span>
-            </motion.h3>
-          </div>
+        <div className="text-center space-y-4 max-w-2xl mx-auto flex flex-col items-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-sm font-semibold tracking-[0.2em] text-gray-400 uppercase"
+          >
+            Our Portfolio
+          </motion.h2>
+          <motion.h3
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight"
+          >
+            Latest Projects We <span className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">Recently Finished.</span>
+          </motion.h3>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="shrink-0"
+            className="pt-4"
           >
             <Link
               href="/projects"
-              className="flex items-center gap-1.5 bg-white/5 border border-white/10 text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-white/10 hover:border-white/20 transition-all"
+              className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-white/10 hover:border-white/20 transition-all"
             >
               View All Projects <ArrowUpRight className="w-4 h-4" />
             </Link>
@@ -154,7 +166,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project) => (
             <ProjectSpotlightCard key={project.id} project={project} />
           ))}

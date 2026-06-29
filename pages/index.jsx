@@ -1,4 +1,5 @@
 import Head from "next/head";
+import SEO from "../components/SEO";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import AboutSection from "../components/AboutSection";
@@ -13,15 +14,7 @@ import ContactSection from "../components/ContactSection";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Kryvvia – Premium AI &amp; Software Development Agency</title>
-        <meta
-          name="description"
-          content="Kryvvia is a premium digital agency specializing in Web Development, Mobile App Development, UI/UX Design, and Search Engine Optimization (SEO). Founded by Sandeep Naik, Nikshitha Vadthyavath, and Samadhan Ghorpade."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon/favicon.ico" />
-      </Head>
+      <SEO />
 
       {/* Hero Section */}
       <HeroSection />

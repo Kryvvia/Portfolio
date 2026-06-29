@@ -19,12 +19,35 @@ export default function ContactSection({ isStandalone = false }) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate sending message
-    setTimeout(() => {
-      toast.success('Your message has been sent successfully! We will get back to you shortly.');
-      setFormData({ name: '', email: '', message: '' });
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE',
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        toast.success('Your message has been sent successfully! We will get back to you shortly.');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast.error('Failed to send message. Please try again later.');
+        console.error(result);
+      }
+    } catch (error) {
+      toast.error('An error occurred. Please try again.');
+      console.error(error);
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (

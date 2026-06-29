@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SEO from '../components/SEO';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -46,13 +47,11 @@ export default function Services() {
 
   return (
     <>
-      <Head>
-        <title>Our Services | Kryvvia</title>
-        <meta
-          name="description"
-          content="Explore Kryvvia services: Web Development, Mobile App Development, UI/UX Design, and Search Engine Optimization (SEO)."
-        />
-      </Head>
+      <SEO 
+        title="Services & Capabilities | Kryvvia"
+        description="Explore our premium services including Next.js Web Development, React Native Apps, SEO, and UI/UX Design."
+        path="/services"
+      />
 
       <div className="max-w-6xl mx-auto px-6 pt-4 pb-14 space-y-12 bg-black text-gray-200">
 

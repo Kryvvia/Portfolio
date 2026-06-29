@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SEO from '../components/SEO';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, CheckCircle2, ShieldCheck, Heart, Sparkles, Lightbulb, Compass, Award, Rocket, HelpCircle } from 'lucide-react';
@@ -71,13 +72,11 @@ export default function About() {
 
   return (
     <>
-      <Head>
-        <title>About Kryvvia | Software Engineering Agency</title>
-        <meta
-          name="description"
-          content="Learn about Kryvvia - a software development agency founded by three IIIT Sonepat engineers building high-performance products."
-        />
-      </Head>
+      <SEO 
+        title="About Kryvvia | Software Engineering Agency"
+        description="Learn about Kryvvia - a software development agency founded by three IIIT Sonepat engineers building high-performance products."
+        path="/about"
+      />
 
       <div className="max-w-6xl mx-auto px-6 pt-4 pb-16 space-y-6 bg-black text-gray-200">
         

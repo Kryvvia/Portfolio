@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import SEO from '../components/SEO';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, Search } from 'lucide-react';
@@ -166,18 +167,16 @@ export default function Projects() {
 
   return (
     <>
-      <Head>
-        <title>Portfolio | Kryvvia</title>
-        <meta
-          name="description"
-          content="Explore Kryvvia complete projects directory, from Spring Boot AWS platforms to deep learning research."
-        />
-      </Head>
+      <SEO 
+        title="Featured Work & Projects | Kryvvia"
+        description="Browse our portfolio of high-performance web applications, scalable platforms, and AI integrations."
+        path="/projects"
+      />
 
       <div className="max-w-6xl mx-auto px-6 pt-4 pb-24 space-y-16 bg-black text-gray-200">
         {/* Intro */}
-        <div className="space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-wider text-white bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full font-mono">
+        <div className="space-y-4 text-center flex flex-col items-center">
+          <span className="text-xs font-semibold uppercase tracking-wider text-white bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full font-mono inline-block">
             Our Works
           </span>
           <motion.h1
@@ -193,7 +192,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="text-gray-400 text-base sm:text-lg font-light leading-relaxed max-w-2xl"
+            className="text-gray-400 text-base sm:text-lg font-light leading-relaxed max-w-2xl mx-auto"
           >
             From serverless transcoding video backends to IEEE publications, explore the full depth of our engineering.
           </motion.p>

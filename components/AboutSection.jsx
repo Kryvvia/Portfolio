@@ -1,4 +1,4 @@
-import { ShieldCheck, Award, HeartHandshake } from 'lucide-react';
+import { ShieldCheck, Award, HeartHandshake, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -19,6 +19,11 @@ export default function AboutSection() {
       title: 'Lifetime Support',
       description: 'Comprehensive handoff documentation, scaling consultations, and maintenance assistance.',
       icon: HeartHandshake,
+    },
+    {
+      title: 'Fast & Reliable Delivery',
+      description: 'Streamlined development workflows and CI/CD pipelines to ensure rapid and dependable product releases.',
+      icon: Zap,
     },
   ];
 

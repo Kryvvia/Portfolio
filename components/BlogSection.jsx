@@ -10,19 +10,19 @@ export default function BlogSection() {
     <section id="blog" className="pt-8 pb-10 px-6 bg-black relative z-10">
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-          <div className="space-y-3">
-            <h2 className="text-sm font-semibold tracking-[0.2em] text-gray-400 uppercase">Insights &amp; Updates</h2>
-            <h3 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-              Every Single Update <span className="text-gradient">News &amp; Blogs.</span>
-            </h3>
+        <div className="text-center space-y-4 max-w-2xl mx-auto flex flex-col items-center">
+          <h2 className="text-sm font-semibold tracking-[0.2em] text-gray-400 uppercase">Insights &amp; Updates</h2>
+          <h3 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Every Single Update <span className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">News &amp; Blogs.</span>
+          </h3>
+          <div className="pt-4">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-white/10 hover:border-white/20 transition-all shrink-0"
+            >
+              Read All Articles <ArrowUpRight className="w-4 h-4" />
+            </Link>
           </div>
-          <Link
-            href="/blog"
-            className="flex items-center gap-1.5 bg-white/5 border border-white/10 text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-white/10 hover:border-white/20 transition-all shrink-0"
-          >
-            Read All Articles <ArrowUpRight className="w-4 h-4" />
-          </Link>
         </div>
 
         {/* Blogs Grid */}

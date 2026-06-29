@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SEO from '../components/SEO';
 import Link from 'next/link';
 import { Calendar, User, ArrowUpRight, Search, Clock } from 'lucide-react';
 import { useState } from 'react';
@@ -25,18 +26,16 @@ export default function BlogList() {
 
   return (
     <>
-      <Head>
-        <title>Insights &amp; Blogs | Kryvvia</title>
-        <meta
-          name="description"
-          content="Read latest updates, tech stories, and engineering learnings from the Kryvvia software development team."
-        />
-      </Head>
+      <SEO 
+        title="Insights & Engineering Blog | Kryvvia"
+        description="Technical deep dives on modern full stack architecture, AI integrations, UI design, and team experiences."
+        path="/blog"
+      />
 
       <div className="max-w-6xl mx-auto px-6 pt-4 pb-24 space-y-10 bg-black text-gray-200">
         
         {/* Intro Section - Compact Vercel Style */}
-        <div className="space-y-4">
+        <div className="space-y-4 text-center flex flex-col items-center mx-auto">
           <span className="inline-block text-xs font-semibold uppercase tracking-wider text-white bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full font-mono">
             Insights &amp; Blogs
           </span>
@@ -44,7 +43,7 @@ export default function BlogList() {
             Engineering Logs <br />
             <span className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">&amp; Product Strategy.</span>
           </h1>
-          <p className="text-gray-400 text-sm sm:text-base font-light max-w-2xl leading-relaxed">
+          <p className="text-gray-400 text-sm sm:text-base font-light max-w-2xl leading-relaxed mx-auto">
             Highly technical articles, deep-dives into backend microservices, real startup building reports, and product design guides written directly by our developers.
           </p>
         </div>

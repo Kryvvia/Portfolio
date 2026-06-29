@@ -1,10 +1,12 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const router = useRouter();
 
   const handleMenuToggle = useCallback(() => {
@@ -14,6 +16,23 @@ export default function Navbar() {
   const closeMenu = useCallback(() => {
     setIsMenuOpen(false);
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== 'undefined') {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+        setLastScrollY(currentScrollY);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const menuItems = [
     { name: 'Home', href: '/' },
@@ -30,10 +49,10 @@ export default function Navbar() {
   return (
     <>
       <header
-        className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 
+        className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-50 
                    bg-black/80 backdrop-blur-md px-6 md:px-8 py-3.5 
                    rounded-full border border-neutral-800 shadow-xl flex items-center justify-between gap-6 
-                   w-[94%] max-w-6xl transition-all duration-300"
+                   w-[94%] max-w-6xl transition-all duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-32'}`}
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group" aria-label="Kryvvia Home">

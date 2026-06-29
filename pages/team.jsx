@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SEO from '../components/SEO';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -24,7 +25,7 @@ export default function Team() {
       id: 'sandeep',
       name: 'Sandeep Naik',
       role: 'Co-founder & Full Stack Web Developer',
-      focus: 'React, Next.js, Node.js, Express, MongoDB',
+      focus: 'MERN Stack, Next.js, Go, TypeScript, React Native, n8n, AWS',
       bio: 'B.Tech CSE student at IIIT Sonepat. Expert in engineering lightning-fast user interfaces, and managing full stack deployments. Leading team workflows.',
       image: '/images/sandeep_v2.png',
       objectPosition: 'object-[center_10%]',
@@ -52,19 +53,17 @@ export default function Team() {
 
   return (
     <>
-      <Head>
-        <title>Developer Team | Kryvvia</title>
-        <meta
-          name="description"
-          content="Meet the core engineering team behind Kryvvia - experts in AI integration, full stack systems, and DevOps scaling."
-        />
-      </Head>
+      <SEO 
+        title="Developer Team | Kryvvia"
+        description="Meet the core engineering team behind Kryvvia - experts in AI integration, full stack systems, and DevOps scaling."
+        path="/team"
+      />
 
       <div className="max-w-6xl mx-auto px-6 pt-4 pb-24 space-y-12 bg-black text-gray-200">
         
         {/* Header */}
-        <div className="max-w-3xl space-y-4">
-          <span className="text-xs font-semibold uppercase tracking-wider text-white bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full font-mono">
+        <div className="max-w-3xl space-y-4 text-center flex flex-col items-center mx-auto">
+          <span className="text-xs font-semibold uppercase tracking-wider text-white bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full font-mono inline-block">
             Three minds. One vision. Endless possibilities.
           </span>
           <motion.h1
@@ -80,7 +79,7 @@ export default function Team() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="text-gray-400 text-base sm:text-lg font-light leading-relaxed"
+            className="text-gray-400 text-base sm:text-lg font-light leading-relaxed mx-auto"
           >
             Our journey began at IIIT Sonepat, where three passionate developers came together through a shared love for technology, innovation, and problem-solving. What started as classroom discussions, hackathons, and collaborative projects gradually evolved into a vision of building impactful digital products. Today, Kryvvia brings together expertise in AI, full-stack development, backend engineering, UI/UX, and product strategy to help businesses transform their ideas into scalable digital solutions.
           </motion.p>
