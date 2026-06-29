@@ -103,6 +103,9 @@ export default function ContactSection({ isStandalone = false }) {
                     <p className="text-sm text-gray-400 mt-1">
                       <a href="tel:+919067442486" className="hover:text-white transition">+91 90674 42486</a>
                     </p>
+                    <p className="text-sm text-gray-400 mt-1">
+                      <a href="tel:+91 29965 27686" className="hover:text-white transition">+91 29965 27686</a>
+                    </p>
                   </div>
                 </div>
               </div>

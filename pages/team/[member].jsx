@@ -183,57 +183,174 @@ const memberData = {
       'Volleyball and Cricket tournament champion captain',
     ],
   },
+
   samadhan: {
-    id: 'samadhan',
-    name: 'Samadhan Ghorpade',
-    role: 'Backend Developer',
-    avatar: '/images/samadhan_v4.png',
-    objectPosition: 'object-[center_10%]',
-    projectTitle: 'Core Backend Implementations',
-    bgTheme: 'from-black via-neutral-950 to-black',
-    colorGlow: 'border-neutral-800 shadow-neutral-900/5',
-    accentClass: 'text-white',
-    email: 'sdghorpade2003@gmail.com',
-    phone: '+91 90674 42486',
-    location: 'Nashik, India',
-    linkedin: 'https://www.linkedin.com/in/samadhan-gh/',
-    github: 'https://github.com/SamadhanGh',
-    quote: '"I build secure, scalable backend systems using Spring Boot, PostgreSQL, AWS, and Docker. I love solving real-world problems with clean architecture and performance-driven design."',
-    bio: "I'm Samadhan Ghorpade, a passionate software developer and 4th-year CSE student at IIIT Sonepat. I specialize in backend microservices, serverless video transcoder architectures, non-blocking Java web servers, and deploying production environments under a strict cloud budget.",
-    skills: [
-      { category: 'Backend Systems', items: ['Spring Boot', 'Hibernate', 'REST APIs', 'Java NIO', 'ExecutorService'] },
-      { category: 'Databases & Ops', items: ['PostgreSQL', 'MySQL', 'Docker', 'AWS Lambda', 'S3', 'CloudFront'] },
-      { category: 'Languages', items: ['Java', 'SQL', 'JavaScript', 'Python', 'C++'] },
-      { category: 'Tools & Security', items: ['Git/GitHub', 'Maven', 'JWT', 'OAuth2', '2FA', 'Postman'] },
-    ],
-    experience: [
-      {
-        role: 'Co-founder & Backend Lead',
-        company: 'Kryvvia',
-        duration: 'May 2026 — Present',
-        desc: 'Handling backend servers, security architectures, microservice integrations, and deployment schedules at Kryvvia.',
-      },
-      {
-        role: 'Freelance Backend Software Engineer',
-        company: 'MakeSenseEdu',
-        duration: 'Jan 2025 — Present',
-        desc: 'Architected async video transcoding using AWS Lambda & FFmpeg, reducing EC2 loads to zero. Integrated Razorpay webhooks and deployed database services inside VPC private subnets.',
-      },
-    ],
-    education: [
-      {
-        degree: 'B.Tech in Computer Science & Engineering',
-        school: 'Indian Institute of Information Technology, Sonepat',
-        duration: '2022 — 2026',
-        desc: 'Specializing in data structures, algorithms, operating systems, and computer networks.',
-      },
-    ],
-    projects: [
-      { name: 'Volexo Booking System', desc: 'Ride-matching wallet engine in Spring Boot improving allocations by 50%.' },
-      { name: 'Async Image Processing System', desc: 'Concurrently processing 900+ image tiles in 150-300ms using Virtual Threads.' },
-      { name: 'MultiThreaded NIO Web Server', desc: 'Static content cache server using non-blocking NIO selectors, HTTPS, SSL.' },
-    ],
+      id: 'samadhan',
+      name: 'Samadhan Ghorpade',
+      role: 'Backend Developer',
+      avatar: '/images/samadhan_v4.png',
+      objectPosition: 'object-[center_10%]',
+      projectTitle: 'Core Backend Implementations',
+      bgTheme: 'from-black via-neutral-950 to-black',
+      colorGlow: 'border-neutral-800 shadow-neutral-900/5',
+      accentClass: 'text-white',
+      email: 'sdghorpade2003@gmail.com',
+      phone: '+91 90674 42486',
+      location: 'Nashik, India',
+      linkedin: 'https://www.linkedin.com/in/samadhan-gh/',
+      github: 'https://github.com/SamadhanGh',
+      quote: '"I help startups and businesses turn ideas into production-ready backend systems with secure APIs, cloud deployment, payment integrations, authentication, and database design. My focus is delivering reliable software that scales as your business grows."',
+      bio: "I'm Samadhan Ghorpade, a Computer Science graduate from IIIT Sonepat and a backend software engineer passionate about designing reliable, scalable software. I enjoy solving complex engineering challenges, learning modern technologies, and building clean, efficient backend systems.",
+      skills:[
+    {
+      category: "Programming Languages",
+      items: ["Java", "SQL","Python"]
+    },
+    {
+      category: "Backend Development",
+      items: [
+        "Spring Boot",
+        "Spring Framework",
+        "Spring MVC",
+        "Spring Security",
+        "Spring AI",
+        "Spring Data JPA",
+        "Hibernate",
+        "REST APIs",
+
+
+      ]
+    },
+    // {
+    //   category: "Frontend Development",
+    //   items: [
+    //     "ReactJS",
+    //     "Next.js",
+    //   ]
+    // },
+    {
+      category: "Databases",
+      items: [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB"
+      ]
+    },
+    {
+      category: "Cloud & DevOps",
+      items: [
+        "AWS Lambda",
+        "AWS S3",
+        "AWS EC2",
+        "AWS RDS",
+        "AWS VPC",
+        "AWS IAM",
+        "AWS CloudWatch",
+        "AWS CloudFormation",
+        "AWS Elastic Beanstalk",
+        "AWS API Gateway",
+        "AWS Route 53",
+        "AWS CloudFront",
+        "Docker",
+        "Git",
+        "GitHub CI/CD",
+        "Maven"
+      ]
+    },
+    {
+      category: "API & Testing",
+      items: [
+        "Postman",
+        "Swagger (OpenAPI)",
+        "JUnit",
+
+
+
+      ]
+    },
+    {
+      category: "Security",
+      items: [
+        "JWT",
+        "OAuth2",
+        "Two-Factor Authentication (2FA)",
+        "RBAC (Role-Based Access Control)",
+        "Payment Integration (Razorpay, Stripe)",
+      ]
+    },
+    {
+      category: "Tools & Platforms",
+      items: [
+        "Cloudinary",
+        "Nginx",
+        "Apache Tomcat",
+        "HLS Streaming",
+        "FFmpeg",
+        "WebSocket",
+      ]
+    },
+    {
+      category: "Operating Systems",
+      items: [
+        "Linux",
+        "Windows",
+        "Arch Linux",
+        "Ubuntu",
+        "Fedora"
+      ]
+    }
+  ],
+
+      experience: [
+       {
+    role: 'Co-founder & Backend Lead',
+    company: 'Kryvvia',
+    duration: 'May 2026 — Present',
+    desc: 'Leading backend architecture and product development, designing scalable APIs, secure authentication systems, microservices, cloud infrastructure, and CI/CD pipelines while driving technical strategy and product delivery.',
   },
+      {
+    role: 'Freelance Backend Software Engineer (1.5+ years)',
+    company: 'MakeSenseEdu',
+    duration: 'Oct 2025 - Apr 2026',
+    desc: 'Delivered production-ready backend solutions for a live EdTech platform using Java 21, Spring Boot, PostgreSQL, Docker, React, and AWS. Engineered secure authentication, payment processing, asynchronous media pipelines, cloud infrastructure, and automated CI/CD to improve scalability, security, and deployment reliability.',
+  },
+      ],
+      education: [
+        {
+          degree: 'B.Tech in Computer Science & Engineering',
+          school: 'Indian Institute of Information Technology, Sonepat',
+          duration: '2022 — 2026',
+          desc: 'Specializing in data structures, algorithms, operating systems, and computer networks.',
+        },
+      ],
+    projects: [
+    {
+      name: 'MakeSenseEdu',
+      desc: 'Production-ready EdTech platform featuring Spring Boot, React, PostgreSQL, AWS, Docker, CI/CD, Razorpay payments, JWT/OAuth2 authentication, and asynchronous video transcoding.'
+    },
+    {
+      name: 'Ambrutratan Resort Bhandardara',
+      desc: 'Responsive resort website displaying villas, local attractions, and direct WhatsApp booking with Cloudinary delivery integrations.'
+    },
+    {
+      name: 'Async Image Processing System',
+      desc: 'Built a concurrent image processing engine with Java 21 Virtual Threads, achieving low-latency processing for 900+ image tiles while maximizing CPU utilization.'
+    },
+     {
+      name: 'Hotel Kalsubai Gate Point',
+      desc: 'Responsive hotel website booking forms, and Cloudinary image delivery for optimized performance.'
+    },
+  ],
+       achievements: [
+
+        'Completed 1.5+ years of paid freelance software development, delivering scalable Java Spring Boot and React-based solutions for multiple clients, including business automation, REST APIs, authentication systems, and cloud deployment.',
+        'Smart India Hackathon (SIH) 2022: Cleared the internal qualifying round.',
+        'Solved 200+ coding problems across LeetCode,CodeChef, and GeeksforGeeks, strengthening problem-solving and algorithmic skills.',
+        'Selected as a delegate for the Ek Bharat Shreshtha Bharat (EBSB) national inter-state cultural exchange program.',
+
+      ],
+    },
+
 };
 
 export default function TeamMember() {
